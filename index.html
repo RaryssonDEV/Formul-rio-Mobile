@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <!-- Ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <!-- Estilos -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="grid">
+        <!-- Seção inicial -->
+        <div class="label-start">
+            <i class="fa fa-rocket" aria-hidden="true"></i>
+            <h1>Pronto para começar?</h1>
+        </div>
+
+        <!-- Formulário -->
+        <div class="formulario">
+            <h2 class="title">Formulário de Cadastro</h2>
+            <form action="#">
+                <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" name="email" id="email" placeholder="Digite seu e-mail" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Senha</label>
+                    <input type="password" name="password" id="password" placeholder="Digite sua senha" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="confirm-password">Confirme sua senha</label>
+                    <input type="password" name="confirm-password" id="confirm-password" placeholder="Confirme sua senha" required>
+                </div>
+
+                <div class="form-group m-auto">
+                    <button type="submit">Cadastrar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

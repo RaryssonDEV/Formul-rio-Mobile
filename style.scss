@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100..900&display=swap');
+
+// Cores
+$primary: #098171;
+$primary-dark: darken($primary, 10%);
+$secondary: #FF9306;
+$background: #F8F7EE;
+$text-color: #333;
+$white: #FFFFFF;
+
+// Breakpoints
+$mobile: 480px;
+$tablet: 768px;
+$desktop: 1024px;
+
+// Reset
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+    background-color: $background;
+    color: $text-color;
+}
+
+// Container principal
+.grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 100vh;
+    padding: 20px;
+
+    .label-start {
+        text-align: center;
+        background-color: $primary;
+        width: 100%;
+        max-width: 400px;
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        animation: fadeIn 0.8s ease-in-out;
+
+        h1 {
+            font-size: 1.8rem;
+            font-weight: 500;
+            color: $white;
+            margin-bottom: 10px;
+        }
+
+        i {
+            font-size: 3rem;
+            color: $secondary;
+            animation: bounce 1s infinite alternate;
+        }
+    }
+
+    .formulario {
+        width: 100%;
+        max-width: 400px;
+        margin-top: 20px;
+        background: $white;
+        padding: 25px;
+        border-radius: 15px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        animation: slideUp 0.8s ease-in-out;
+
+        .title {
+            text-align: center;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: $primary;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            width: 100%;
+            margin-bottom: 15px;
+
+            label {
+                font-size: 0.9rem;
+                font-weight: 500;
+                color: $text-color;
+                display: block;
+                margin-bottom: 5px;
+            }
+
+            input {
+                width: 100%;
+                height: 45px;
+                padding: 10px;
+                border-radius: 8px;
+                border: 2px solid lighten($primary, 20%);
+                background-color: $background;
+                font-size: 1rem;
+                transition: all 0.3s ease;
+
+                &:focus {
+                    border-color: $primary;
+                    background-color: $white;
+                    box-shadow: 0 0 8px rgba($primary, 0.5);
+                }
+            }
+        }
+
+        .m-auto {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+
+            button {
+                width: 100%;
+                max-width: 200px;
+                height: 45px;
+                background-color: $primary;
+                border: none;
+                color: $white;
+                border-radius: 8px;
+                font-size: 1rem;
+                font-weight: 600;
+                cursor: pointer;
+                transition: all 0.3s ease;
+                box-shadow: 0 4px 8px rgba($primary, 0.2);
+
+                &:hover {
+                    background-color: $primary-dark;
+                    transform: scale(1.05);
+                    box-shadow: 0 6px 12px rgba($primary, 0.3);
+                }
+            }
+        }
+    }
+}
+
+// Animações
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounce {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-10px);
+    }
+}
+
+// Responsividade
+@media (max-width: $tablet) {
+    .grid {
+        padding: 15px;
+    }
+
+    .label-start {
+        padding: 20px;
+    }
+
+    .formulario {
+        padding: 20px;
+    }
+}
